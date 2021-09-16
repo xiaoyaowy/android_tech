@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/day96http/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19583333333333333" />
+        <entry key="..\:/day96http/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17760416666666667" />
+        <entry key="..\:/day96http/app/src/main/res/layout/GoodsConnect.xml" value="0.21666666666666667" />
+        <entry key="..\:/day96http/app/src/main/res/layout/activity_bom.xml" value="0.2953125" />
+        <entry key="..\:/day96http/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/day96http/app/src/main/res/layout/goodsconnect.xml" value="0.327445652173913" />
+        <entry key="..\:/day96http/app/src/main/res/layout/techGoods_item.xml" value="0.1" />
+        <entry key="..\:/day96http/app/src/main/res/layout/techgoods_item.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
