@@ -1,8 +1,11 @@
 package com.example.myapplication;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,10 +23,14 @@ import com.example.myapplication.entity.TechGoods;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -37,12 +44,34 @@ public class MainActivity extends AppCompatActivity{
     private List<GoodsConnect> goodsConnectList = new ArrayList<>();
     private GoodsConnectAdapter adapter;
 
+//    File cacheFile = new File(getExternalCacheDir().toString(),"cache");
+//    //缓存大小为10M
+//    int cacheSize = 10 * 1024 * 1024;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         searchView=findViewById(R.id.searchview);
         listView = findViewById(R.id.list_view);
+
+
+//        if (SDK_INT < Build.VERSION_CODES.P) {
+//            return;
+//        }
+
+//        try {
+//            Method forName = Class.class.getDeclaredMethod("forName", String.class);
+//            Method getDeclaredMethod = Class.class.getDeclaredMethod("getDeclaredMethod", String.class, Class[].class);
+//            Class<?> vmRuntimeClass = (Class<?>) forName.invoke(null, "dalvik.system.VMRuntime");
+//            Method getRuntime = (Method) getDeclaredMethod.invoke(vmRuntimeClass, "getRuntime", null);
+//            Method setHiddenApiExemptions = (Method) getDeclaredMethod.invoke(vmRuntimeClass, "setHiddenApiExemptions", new Class[]{String[].class});
+//            Object sVmRuntime = getRuntime.invoke(null);
+//            setHiddenApiExemptions.invoke(sVmRuntime, new Object[]{new String[]{"L"}});
+//        } catch (Throwable e) {
+//            Log.e("[error]", "reflect bootstrap failed:", e);
+//        }
+
 //        设置该SearchView默认是否自动缩小为图标
         searchView.setIconifiedByDefault(false);
 //        设置该SearchView显示搜索图标
@@ -113,7 +142,7 @@ public class MainActivity extends AppCompatActivity{
                 try {
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder()
-                            .url("http://192.168.80.62:8081/code/get/" + queryText)
+                            .url("http://192.168.4.85:8081/code/get/" + queryText)
                             .build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
@@ -152,6 +181,7 @@ public class MainActivity extends AppCompatActivity{
             public void run() {
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
+
                 try {
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder()

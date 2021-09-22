@@ -15,7 +15,6 @@
             android:layout_column="1"
             android:padding="3dp"
             android:textSize="16dp"
-            android:background="@drawable/text_view_border"
             />
         <TextView
             android:id="@+id/gdescription"
@@ -26,7 +25,6 @@
             android:singleLine="true"
             android:maxEms="12"
             android:ellipsize="end"
-            android:background="@drawable/text_view_border"
             />
     </TableRow>
 

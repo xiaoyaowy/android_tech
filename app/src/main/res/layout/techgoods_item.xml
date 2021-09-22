@@ -4,63 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="2"
+    android:id="@+id/t_bom"
     tools:context="com.example.myapplication.BomActivity"
     >
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/factory"
-            android:layout_column="1"
-            android:padding="3dp"
-            android:textSize="10dp"
-            />
-        <TextView
-            android:id="@+id/wuliao"
-            android:text="物料："
-            android:layout_column="2"
-            android:padding="3dp"
-            android:textSize="10dp"
-            android:gravity="right"
-            />
-    </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/factory"
+                android:text="物料："
+                android:layout_column="1"
+                android:padding="3dp"
+                android:textSize="13dp"
+                />
+            <TextView
+                android:id="@+id/wuliao"
+                android:layout_column="2"
+                android:padding="3dp"
+                android:textSize="13dp"
+                />
+        </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/picture"
-            android:layout_width="375dp"
-            android:layout_column="1"
-            android:padding="3dp"
-            android:textSize="10dp" />
-        <TextView
-            android:id="@+id/description"
-            android:layout_column="2"
-            android:padding="3dp"
-            android:textSize="10dp"
-            android:gravity="right"
-            />
-    </TableRow>
+            <TextView
+                android:id="@+id/picture"
+                android:text="组件："
+                android:layout_width="10dp"
+                android:layout_column="1"
+                android:padding="3dp"
+                android:textSize="13dp" />
+            <TextView
+                android:id="@+id/description"
+                android:layout_column="2"
+                android:padding="3dp"
+                android:textSize="13dp"
+                />
+        </TableRow>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/content"
-            android:layout_column="1"
-            android:padding="3dp"
-            android:textSize="10dp"
-            />
-        <TextView
-            android:id="@+id/contentDesc"
-            android:padding="3dp"
-            android:textSize="10dp"
-            android:gravity="right"
-            />
-    </TableRow>
-
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/content"
+                android:text="组件描述："
+                android:layout_column="1"
+                android:padding="3dp"
+                android:textSize="13dp"
+                />
+            <TextView
+                android:id="@+id/contentDesc"
+                android:padding="3dp"
+                android:textSize="13dp"
+                />
+        </TableRow>
 
 </TableLayout>

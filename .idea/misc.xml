@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/day96http/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19583333333333333" />
         <entry key="..\:/day96http/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17760416666666667" />
+        <entry key="..\:/day96http/app/src/main/res/drawable/text_view_border.xml" value="0.1814814814814815" />
         <entry key="..\:/day96http/app/src/main/res/layout/GoodsConnect.xml" value="0.21666666666666667" />
         <entry key="..\:/day96http/app/src/main/res/layout/activity_bom.xml" value="0.2953125" />
         <entry key="..\:/day96http/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/day96http/app/src/main/res/layout/activity_print.xml" value="0.25364583333333335" />
         <entry key="..\:/day96http/app/src/main/res/layout/goodsconnect.xml" value="0.327445652173913" />
         <entry key="..\:/day96http/app/src/main/res/layout/techGoods_item.xml" value="0.1" />
         <entry key="..\:/day96http/app/src/main/res/layout/techgoods_item.xml" value="0.33" />
